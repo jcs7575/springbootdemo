@@ -18,3 +18,13 @@ spring:
 mybatis:
     mapperLocations: classpath*:mapper/*.xml
     typeAliasesPackage: com.springboot.test.domain
+springfox:
+    api:
+        group: group-001
+        title: 测试 swagger
+        desc: 自动化的在线 api 文档
+        version: v2
+        termsOfServiceUrl: termsUrl
+        contact: jcs7575@gmail.com
+        license: licenseSample
+        licenseUrl: licenseUrl
