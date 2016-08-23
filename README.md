@@ -7,5 +7,7 @@
 ###数据库连接池使用 Druid
 详见「DruidConfig、DatabaseConfiguration」,加入了连接池监控功能
 ###添加 Swagger 支持生成 api-doc
-详见 WebApiAutoConfiguration
+详见 WebApiAutoConfiguration 
+
+URL [api-docs](http://127.0.0.1:8080/swagger-ui.html) 
 

@@ -2,6 +2,8 @@ package com.springboot.test.controller;
 
 import com.springboot.test.dao.CityDao;
 import com.springboot.test.domain.City;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 @RequestMapping("/v1")
+@Api
 public class TestController {
 
     @RequestMapping(value = "/test01", method = RequestMethod.GET)
@@ -27,6 +30,7 @@ public class TestController {
     @Autowired
     private CityDao cityDao;
 
+    @ApiOperation(value = "创建城市",notes = "返回城市实体对象",response = City.class)
     @RequestMapping(value = "/save",method = RequestMethod.PUT)
     @ResponseBody
     public Object save(){

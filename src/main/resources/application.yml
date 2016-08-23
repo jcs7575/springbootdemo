@@ -28,3 +28,7 @@ springfox:
         contact: jcs7575@gmail.com
         license: licenseSample
         licenseUrl: licenseUrl
+#    documentation:
+#        swagger:
+#            v2:
+#                path: apis

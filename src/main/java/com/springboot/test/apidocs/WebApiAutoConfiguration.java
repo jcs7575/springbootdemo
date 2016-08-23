@@ -49,8 +49,12 @@ import java.util.Date;
 
                 ApiInfo apiInfo = new ApiInfo(title, desc, version, termsOfServiceUrl, contact, license, licenseUrl);
                 return new Docket(DocumentationType.SWAGGER_2).groupName(apiGroupName).apiInfo(apiInfo).select()
-                        .apis(RequestHandlerSelectors.basePackage("com.springboot.test.controller")).paths(PathSelectors.any()).build().pathMapping("/")
+                        .apis(RequestHandlerSelectors.basePackage("com.springboot.test.controller"))
+                        .paths(PathSelectors.any()).build().pathMapping("/")
                         .directModelSubstitute(Date.class, String.class).genericModelSubstitutes(ResponseEntity.class);
         }
 
+
 }
+
+
