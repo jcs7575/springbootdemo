@@ -8,3 +8,5 @@ logs
 *.log
 backup
 log
+build
+.gradle
