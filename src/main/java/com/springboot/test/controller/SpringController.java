@@ -15,9 +15,4 @@ public class SpringController {
     String home() {
         return "Hello spring boot";
     }
-
-    public static void main(String[] args) {
-        SpringApplication.run(SpringController.class,args);
-    }
-
 }
