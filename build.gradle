@@ -35,7 +35,7 @@ dependencies {
     compile ("com.alibaba:druid:1.0.24")
     compile ("io.springfox:springfox-swagger2:2.5.0")
     compile ("io.springfox:springfox-swagger-ui:2.5.0")
-    compile ("org.projectlombok:lombok:1.16.10")
+    compileOnly ("org.projectlombok:lombok:1.16.10")
     testCompile ("org.springframework.boot:spring-boot-starter-test:1.4.0.RELEASE") {
         exclude module: "commons-logging"
     }
