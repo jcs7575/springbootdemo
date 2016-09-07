@@ -15,6 +15,9 @@ spring:
         #testOnBorrow: false
         #testOnReturn: false
 
+    application:
+        name: springBootDemo
+        instance_id: clent-one
 mybatis:
     mapperLocations: classpath*:mapper/*.xml
     typeAliasesPackage: com.springboot.test.domain
@@ -32,3 +35,12 @@ springfox:
 #        swagger:
 #            v2:
 #                path: apis
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    statusPageUrlPath: ${management.contextPath}/info
+    healthCheckUrlPath: ${management.contextPath}/health

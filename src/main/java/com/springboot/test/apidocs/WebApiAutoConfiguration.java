@@ -23,8 +23,11 @@ import java.util.Date;
 /**
  * Created by Jerry on 16/8/23.
  */
-@Configuration @EnableSwagger2 @ComponentScan("com.springboot.test.controller") @AutoConfigureAfter(
-        WebMvcAutoConfiguration.class) public class WebApiAutoConfiguration extends WebMvcConfigurerAdapter {
+@Configuration
+@EnableSwagger2
+@ComponentScan("com.springboot.test.controller")
+@AutoConfigureAfter(WebMvcAutoConfiguration.class)
+public class WebApiAutoConfiguration extends WebMvcConfigurerAdapter {
         protected Logger logger = org.slf4j.LoggerFactory.getLogger(WebApiAutoConfiguration.class);
 
         @Value("${springfox.api.group:[your group name]}") private String apiGroupName;
