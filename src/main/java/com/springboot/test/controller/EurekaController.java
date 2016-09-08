@@ -1,6 +1,7 @@
 package com.springboot.test.controller;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -23,6 +24,11 @@ public class EurekaController {
         @Autowired
         private DiscoveryClient discoveryClient;
 
+        /**
+         * 通过 Eureka 访问「/」接口返回数据
+         * @return
+         */
+        @ApiOperation(value = "Eureka调用服务", notes = "调用的是「/」接口", response =  String.class)
         @RequestMapping(value = "eureka/list", method = RequestMethod.GET)
         @ResponseBody
         public Object test01() {

@@ -11,5 +11,10 @@
 ###添加 Swagger 支持生成 api-doc
 详见 WebApiAutoConfiguration 
 
-URL [api-docs](http://127.0.0.1:8080/swagger-ui.html) 
+URL [api-docs](http://127.0.0.1:8080/swagger-ui.html)
+
+###添加 Eureka 处理服务注册发现
+Eureka server 请参照「eureka」项目，直接 fork 了一个运行 server
+也可以直接下载 eureka 的 war 包运行
+
 
