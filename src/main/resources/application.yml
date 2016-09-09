@@ -42,5 +42,18 @@ eureka:
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    statusPageUrlPath: ${management.contextPath}/info
-    healthCheckUrlPath: ${management.contextPath}/health
+#    statusPageUrlPath: ${management.contextPath}/info
+#    healthCheckUrlPath: ${management.contextPath}/health
+info:
+    app:
+        name: ecs
+        version: 1.0.0
+
+    build:
+        artifactId: @project.artifactId@
+        version: @project.version@
+endpoints:
+    shutdown:
+        enabled: true
+    restart:
+        enabled: true

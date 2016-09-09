@@ -17,4 +17,6 @@ URL [api-docs](http://127.0.0.1:8080/swagger-ui.html)
 Eureka server 请参照「eureka」项目，直接 fork 了一个运行 server
 也可以直接下载 eureka 的 war 包运行
 
+###添加 Actuator 负责服务状态监控
+可以很方便的监控一些服务状态，需要自定义可以通过 EndPoint 机制实现
 
