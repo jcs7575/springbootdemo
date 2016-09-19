@@ -18,6 +18,11 @@ spring:
     application:
         name: springBootDemo
         instance_id: clent-one
+    rabbitmq:
+        host: 127.0.0.1
+        port: 5672
+        username: springbus
+        password: springbus
 mybatis:
     mapperLocations: classpath*:mapper/*.xml
     typeAliasesPackage: com.springboot.test.domain
@@ -57,3 +62,5 @@ endpoints:
         enabled: true
     restart:
         enabled: true
+server:
+    port: 8080

@@ -20,3 +20,5 @@ Eureka server 请参照「eureka」项目，直接 fork 了一个运行 server
 ###添加 Actuator 负责服务状态监控
 可以很方便的监控一些服务状态，需要自定义可以通过 EndPoint 机制实现
 
+###添加 spring-bus 用来在线更新集群的配置
+通过 /bus/refresh 刷新服务，集群中标注了 @RefreshScope 的服务都会被刷新，无需刷新每一台服务
