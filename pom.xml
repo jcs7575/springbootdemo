@@ -108,6 +108,16 @@
 			<!--<artifactId>spring-amqp</artifactId>-->
 			<!--<version>1.6.2.RELEASE</version>-->
 		<!--</dependency>-->
+		<!-- https://mvnrepository.com/artifact/com.netflix.ribbon/ribbon-eureka -->
+		<dependency>
+			<groupId>com.netflix.ribbon</groupId>
+			<artifactId>ribbon-eureka</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-feign</artifactId>
+		</dependency>
 
 	</dependencies>
 

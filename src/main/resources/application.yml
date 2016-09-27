@@ -41,14 +41,13 @@ springfox:
 #            v2:
 #                path: apis
 eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    metadataMap:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-#    statusPageUrlPath: ${management.contextPath}/info
-#    healthCheckUrlPath: ${management.contextPath}/health
+    instance:
+        instance-id: ${spring.application.name}:${spring.application.instance_id}:${random.value}
+    client:
+        service-url:
+            defaultZone: http://localhost:8761/eureka/
+        healthcheck:
+            enabled: true
 info:
     app:
         name: ecs
@@ -64,3 +63,12 @@ endpoints:
         enabled: true
 server:
     port: 8080
+ribbon:
+    ReadTimeout: 1000
+demoservice:
+    ribbon:
+        DeploymentContextBasedVipAddresses: springBootDemo
+        NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
+        ReadTimeout: 5000
+        MaxAutoRetries: 2
+
