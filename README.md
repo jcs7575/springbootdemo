@@ -34,3 +34,7 @@ Eureka server 请参照「eureka」项目，直接 fork 了一个运行 server
 
 ###添加 Feign 简化服务间调用
 参考[DemoService](https://github.com/jcs7575/springbootdemo/tree/master/src/main/java/com/springboot/test/core/service/DemoService.java)
+
+###添加 Hystrix 断路器
+参考[HystrixServiceImpl](https://github.com/jcs7575/springbootdemo/tree/master/src/main/java/com/springboot/test/core/service/HystrixServiceImpl.java)
+

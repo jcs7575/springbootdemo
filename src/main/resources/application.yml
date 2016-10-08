@@ -42,6 +42,7 @@ springfox:
 #                path: apis
 eureka:
     instance:
+        virtualHostName: ${spring.application.name}
         instance-id: ${spring.application.name}:${spring.application.instance_id}:${random.value}
     client:
         service-url:
@@ -61,6 +62,8 @@ endpoints:
         enabled: true
     restart:
         enabled: true
+    health:
+        enabled: true
 server:
     port: 8080
 ribbon:
@@ -71,4 +74,3 @@ demoservice:
         NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
         ReadTimeout: 5000
         MaxAutoRetries: 2
-

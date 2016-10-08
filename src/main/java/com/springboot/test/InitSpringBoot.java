@@ -7,6 +7,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 /**
  * Created by Jerry on 16/8/1.
@@ -15,6 +17,8 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @MapperScan(basePackages = "com.springboot.test.dao")
 @EnableEurekaClient
 @EnableFeignClients
+@EnableHystrix
+@EnableHystrixDashboard
 public class InitSpringBoot extends SpringBootServletInitializer {
 
     @Override
