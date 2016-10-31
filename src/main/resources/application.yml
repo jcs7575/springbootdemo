@@ -74,3 +74,9 @@ demoservice:
         NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
         ReadTimeout: 5000
         MaxAutoRetries: 2
+zuul:
+    #过滤器生效的 path，默认是 zuul
+    servletPath: /zuulfilter
+        groovy:
+            #指定 groovy 目录
+            path: /Users/Jerry/program/groovy
